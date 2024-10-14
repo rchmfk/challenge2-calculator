@@ -5,16 +5,16 @@ const count   = document.querySelector("#count");
 const reset   = document.querySelector("#reset");
 
 function checkNumber(num){
-    if(display.value == '0'){
-        display.value = num;
+    if(display.innerHTML == '0'){
+        display.innerHTML = num;
     }else{
-        display.value = display.value + num;
+        display.innerHTML = display.innerHTML + num;
     }
 }
 function checkReset(){
     if(reset.value == "reset"){
-        display.value = "";
-        formula.value = "";
+        display.innerHTML = "";
+        formula.innerHTML = "";
         reset.value="";
     }
 }
@@ -78,7 +78,7 @@ click0.addEventListener("click", function() {
 const clickDivide = document.querySelector("#clickDivide");
 clickDivide.addEventListener("click", function() {
     num = clickDivide.value;
-    display.value = display.value + num;
+    display.innerHTML = display.innerHTML + num;
     if(reset.value == "reset"){
         reset.value = "";
     }
@@ -87,7 +87,7 @@ clickDivide.addEventListener("click", function() {
 const clickMultiply = document.querySelector("#clickMultiply");
 clickMultiply.addEventListener("click", function() {
     num = clickMultiply.value;
-    display.value = display.value + num;
+    display.innerHTML = display.innerHTML + num;
     if(reset.value == "reset"){
         reset.value = "";
     }
@@ -96,7 +96,7 @@ clickMultiply.addEventListener("click", function() {
 const clickSubstract = document.querySelector("#clickSubstract");
 clickSubstract.addEventListener("click", function() {
     num = clickSubstract.value;
-    display.value = display.value + num;
+    display.innerHTML = display.innerHTML + num;
     if(reset.value == "reset"){
         reset.value = "";
     }
@@ -105,7 +105,7 @@ clickSubstract.addEventListener("click", function() {
 const clickAdd = document.querySelector("#clickAdd");
 clickAdd.addEventListener("click", function() {
     num = clickAdd.value;
-    display.value = display.value + num;
+    display.innerHTML = display.innerHTML + num;
     if(reset.value == "reset"){
         reset.value = "";
     }
@@ -115,8 +115,8 @@ clickAdd.addEventListener("click", function() {
 // CLEAR
 const clickAllClear = document.querySelector("#clickAllClear");
 clickAllClear.addEventListener("click", function() {
-    display.value = "";
-    formula.value = "";
+    display.innerHTML = "";
+    formula.innerHTML = "";
 });
 
 
@@ -124,29 +124,29 @@ clickAllClear.addEventListener("click", function() {
 const clickClear = document.querySelector("#clickClear");
 clickClear.addEventListener("click", function() {
     checkReset();
-    const hasil = display.value.slice(0, -1);
-    display.value = hasil;
+    const hasil = display.innerHTML.slice(0, -1);
+    display.innerHTML = hasil;
 });
 
 
 // DECIMAL
 const clickDecimal = document.querySelector("#clickDecimal");
 clickDecimal.addEventListener("click", function() {
-    if(display.value.length == '0'){
-        display.value = "";
+    if(display.innerHTML.length == '0'){
+        display.innerHTML = "";
     }else{
-        display.value = display.value + ".";
+        display.innerHTML = display.innerHTML + ".";
     }
 });
 
 
 // EQUAL
 function clickEqual() {
-    formula.value = display.value;
+    formula.innerHTML = display.innerHTML;
     try {
-        display.value = eval(display.value);
+        display.innerHTML = eval(display.innerHTML);
     } catch (error) {
-        display.value = 'Error';
+        display.innerHTML = 'Error';
     }
     reset.value = "reset"
 }

@@ -57,6 +57,7 @@ button:hover {
 #display{
     text-align: right;
     width: 350px;
+    height: 60px;
     background-color: black;
     color: white;
     font-size: 50px;
@@ -66,12 +67,12 @@ button:hover {
     overflow: hidden;
     text-overflow: ellipsis; 
     margin-top: 0px;
-    margin-bottom: 20px;
     border: none;
 }
 #formula{
     text-align: right;
     width: 350px;
+    height: 20px;
     background-color: black;
     color: rgb(194, 194, 194);
     color: rgb(91, 74, 82);
