@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="calculator">
+        <div class="display">
+            <input type="text" id="formula" disabled><br>
+        </div>
+        <div class="display">
+            <input type="text" id="display" disabled><br>
+            <input type="text" id="reset" hidden><br>
+        </div>
+        <div id="count" style="display:none;">0</div>
+        <div class="number" style="width:350px">
+            <button id="clickAllClear" value="AC" style="flex-grow:1;border-radius: 100px;">AC</button>
+            <button id="clickClear" class="round" value="C">C</button>
+            <button id="clickDivide" class="operasi round" class="round" value="/">÷</button>
+        </div>
+        <div class="number">
+            <button id="click7" class="round" value="7">7</button>
+            <button id="click8" class="round" value="8">8</button>
+            <button id="click9" class="round" value="9">9</button>
+            <button id="clickMultiply" class="operasi round" value="*">×</button>
+        </div>
+        <div class="number">
+            <button id="click4" class="round" value="4">4</button>
+            <button id="click5" class="round" value="5">5</button>
+            <button id="click6" class="round" value="6">6</button>
+            <button id="clickSubstract" class="operasi round" value="-">–</button>
+        </div>
+        <div class="number">
+            <button id="click1" class="round" value="1">1</button>
+            <button id="click2" class="round" value="2">2</button>
+            <button id="click3" class="round" value="3">3</button>
+            <button id="clickAdd" class="operasi round" value="+">+</button>
+        </div>
+        <div class="number" style="width:350px">
+            <button id="click0" class="round" value="0">0</button>
+            <button id="clickDecimal" class="round" value=".">.</button>
+            <button id="clickEqual" class="equal" onclick="clickEqual()" style="flex-grow:1;border-radius: 100px;">=</button>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

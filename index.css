@@ -1,0 +1,87 @@
+body{
+    background-color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.calculator{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 10px;
+}
+.nunito {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.number{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+button{
+    width: 80px;
+    height: 80px;
+    border:none;
+    border-radius: 10px;
+    background-color: rgb(16, 16, 16);
+    color: white;
+    font-size: 30px;
+}
+button:hover {
+    background-color: rgb(32, 32, 32);
+    cursor: pointer;
+    font-size: 35px;
+}
+.operasi{
+    background-color: rgb(40, 40, 40);
+}
+.operasi:hover{
+    background-color: rgb(50, 50, 50);
+}
+.equal{
+    background-color: rgb(100, 37, 62);
+}
+.equal:hover{
+    background-color: rgb(127, 52, 82);
+}
+#display{
+    text-align: right;
+    width: 350px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+#formula{
+    text-align: right;
+    width: 350px;
+    background-color: black;
+    color: rgb(194, 194, 194);
+    color: rgb(91, 74, 82);
+    font-size: 20px;
+    /* font-weight: 400; */
+    letter-spacing: 6px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.round{
+    border-radius: 100%;
+}
